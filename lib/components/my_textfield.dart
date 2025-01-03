@@ -11,14 +11,16 @@ class MyTextfield extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: TextField(
+        controller: controller,
+        obscureText: isObseureText,
         decoration: InputDecoration(
-          hintText: 'Email',
+          hintText: hintText,
           hintStyle: TextStyle(
             color: Theme.of(context).colorScheme.primary,
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
           ),
           focusedBorder: OutlineInputBorder(
